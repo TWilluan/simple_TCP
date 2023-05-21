@@ -4,3 +4,33 @@
 ================================================
 
 DESCRIBE YOUR CODE AND DESIGN DECISIONS HERE
+
+WEAKNESSES:
+    Even though my code works, but I am afraid my connection teardown 
+    section is not correct as:
+        SENDER:                         RECIEVER:
+            FIN            ->               ACK
+            ACK            <-               FIN      
+
+IMPLEMENTED:
+    - Sliding windows
+        fixed size = 3072
+    - Connection setup/teardown
+    - TCP segment send/recieve
+
+DESIGN DECISIONS:
+    Context_t:
+        - connection state
+        - initial sequence number
+        - recv_seq_num
+        - window_size
+
+    Added functions:
+        - create_packet():
+        - send_packet();
+        - wait_for_packet():
+        - app_event():
+        - network_event():
+        - app_close_event():
+
+    Three_way handshakings

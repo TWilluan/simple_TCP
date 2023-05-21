@@ -53,8 +53,6 @@ main(int argc, char *argv[])
     int errflg = 0;
     int sd;
 
-
-
     filename = NULL;
     /* Parse command line options */
     while ((opt = getopt(argc, argv, "f:q")) != EOF)
